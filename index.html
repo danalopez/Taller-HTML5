@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tarea 2 - Front HTML5</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	
+		<!-- Librerías Bootstrap: Estilos externos del sitio web -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>       
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>     
+
+		<!-- Funciones Javascript -->
+		<script type="text/javascript" src="functions.js"></script>
+
+	</head>
+	<body>
+
+		<!-- Cabecera -->
+		<div class="page-header">
+			<center><h2>Movimientos Clientes</h2></center>
+		</div>
+
+		<!--Formulario de entrada de datos-->
+		<div class="container">
+			<form id="frmPerson" class="form-horizontal">
+				<div class="form-group">
+					<label for="txtNombre" class="col-sm-2 control-label">Nombre Movimiento</label>
+					<div class="col-sm-10">
+						<input type="text" id="txtNombre" class="form-control" placeholder="Escriba el Nombre de su Movimiento">
+					</div>
+				</div>                    
+				<div class="form-group">
+					<label for="txtTipo" class="col-lg-2 control-label">Tipo Movimiento</label>
+					<div class="col-sm-10">
+						<select type="tipo"  id="txtTipo" class="form-control" >
+						  <option>-- Elija El Tipo --</option>
+						  <option>Retiro</option>
+						  <option>Deposito</option>
+		 				</select>
+					
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="txtValor" class="col-lg-2 control-label">Valor Movimiento</label>
+						<div class="col-sm-10">
+
+						<div class="input-group">
+						<div class="input-group-addon">$</div>
+					  		<input type="text" class="form-control" id="txtValor" placeholder="Digite El Valor">
+					  	</div>
+						</div>
+				</div>
+		   
+			   <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <button type="submit" class="btn btn-primary" id="btnCrear">Crear Movimiento</button>
+				</div>
+				</div>
+
+			</form>
+		</div>      
+
+		<!--Tabla con la lista de datos-->
+		<div class="container">
+			<table id="tblList" class="table table-bordered"></table>
+		</div>
+
+	  
+	</body>
+</html>
